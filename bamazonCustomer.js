@@ -68,6 +68,7 @@ function doPurchase (item_id, amount) {
     if(product.stock_quantity < amount)
     {
       console.log('\nInsufficient quantity!');
+      connection.end();
     }
     else {
       completeTransaction(item_id, amount, product.price);
